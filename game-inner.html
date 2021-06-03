@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="robots" content="noindex">
+    <style>
+    html,
+    body,
+    canvas,
+    div {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    .buttons {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+    }
+    .buttons button {
+        margin: 0.3em;
+        padding: 0.2em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="add" data-name="Trash">Trash</button>
+        <button class="add" data-name="OutputPumpMachine">OutputPump</button>
+        <button class="add" data-name="InputPumpMachine">InputPump</button>
+        <button class="add" data-name="BlowerMachine">Blower</button>
+        <button class="add" data-name="PropellerMachine">Propeller</button>
+        <button class="add" data-name="MouseMovableMachine">Block</button>
+        <br>
+        <button class="export">Export</button>
+        <button class="import">Import</button>
+    </div>
+    <div class="canvas-container"></div>
+    <script defer class='matter-js' src='https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js' type='text/javascript'></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/pathseg@1.2.0/pathseg.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>
+    <script defer type="module" src="game-inner.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36849335-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-36849335-1');
+    </script>
+
+    <!-- icon's attribution is here: attribution.html -->
+</body>
+
+</html>
