@@ -1,0 +1,24 @@
+name: Deploy blog content
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      #- name: Build
+      #- name: Commit built branch
+
+      - name: deploy
+        run: |
+          curl -i \
+            -X POST \
+            -H "X-ONSTATIC-KEY: ${{ secrets.ONSTATIC_KEY }}" \
+            -H "X-ONSTATIC-REPONAME: git@github.com:sters/game.gomiba.co.git" \
+            -H "X-ONSTATIC-BRANCH-NAME: main" \
+            https://static.gomiba.co/pull
